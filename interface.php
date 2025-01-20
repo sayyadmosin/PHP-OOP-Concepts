@@ -1,3 +1,7 @@
+<html decoctype="html">
+
+<h1>Interface Example</h1>
+
 <?php
 
 // interface is a class with only abstract methods
@@ -33,6 +37,9 @@ class kotak implements Banktransaction{ // class implements interface
 
 
 $kotakobj = new kotak();
-
+echo "Transasction Details for kotak: <br>";
 $kotakobj->deposit(1000.00); // Amount 1000 is deposited in kotak bank and object will return true
+?>
+
+</html>
 
