@@ -8,8 +8,8 @@
 
 
 interface Banktransaction{
-    public function deposit($amount):string;
-    public function withdraw($amount):string;
+    public function deposit(float $amount):bool;
+    public function withdraw(float $amount):bool;
 
 }
 
@@ -17,20 +17,22 @@ interface Banktransaction{
 
 class kotak implements Banktransaction{ // class implements interface
 
-    public function deposit(float $amount):float{
+    public function deposit(float $amount):bool{
 
         echo "Amount $amount is deposited in kotak bank";
+        return true;
     }
 
 
-    public function withdraw(float $amount):float{
+    public function withdraw(float $amount):bool{
 
         echo "Amount $amount is withdrawn from kotak bank";
+        return true;
     }
 }
 
 
 $kotakobj = new kotak();
 
-$kotakobj->deposit(1000);
+$kotakobj->deposit(1000.00); // Amount 1000 is deposited in kotak bank and object will return true
 
