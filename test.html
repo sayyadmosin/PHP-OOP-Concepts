@@ -1,0 +1,18 @@
+<!-- In the target website -->
+<link rel="stylesheet" href="http://127.0.0.1:8000/widget/styles.css">
+<div id="laravel-widget"></div>
+
+<script src="http://127.0.0.1:8000/widget/script.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if (window.LaravelWidget) {
+            LaravelWidget.init('laravel-widget', {
+                apiUrl: 'http://127.0.0.1:8000/widget',
+                theme: 'light',
+                title: 'My Laravel Widget'
+            });
+        } else {
+            console.error('LaravelWidget failed to load');
+        }
+    });
+</script>
